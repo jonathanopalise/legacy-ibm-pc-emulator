@@ -1,0 +1,1 @@
+%s[bx+si],%s[bx+di],%s[bp+si],%s[bp+di],%s[si],%s[di],%s[%x],%s[bx],%s[bx+si%s%x],%s[bx+di%s%x],%s[bp+si%s%x],%s[bx+di%s%x],%s[si%s%x],%s[di%s%x],%s[bp%s%x],%s[bx%s%x],%s[bx+si+%x],%s[bx+di+%x],%s[bp+si+%x],%s[bx+di+%x],%s[si+%x],%s[di+%x],%s[bp+%x],%s[bx+%x],al,cl,dl,bl,ah,ch,dh,bh,ax,cx,dx,bx,sp,bp,si,di,es,cs,ss,ds,fs,gs,(sreg),(sreg),

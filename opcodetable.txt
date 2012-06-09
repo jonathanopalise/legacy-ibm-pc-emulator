@@ -1,0 +1,392 @@
+add %s,%s
+add %s,%s
+add %s,%s
+add %s,%s
+add al,%x
+add ax,%x
+push es
+pop es
+or %s,%s
+or %s,%s
+or %s,%s
+or %s,%s
+or al,%x
+or ax,%x
+push cs
+pop cs
+adc %s,%s
+adc %s,%s
+adc %s,%s
+adc %s,%s
+adc al,%x
+adc ax,%x
+push ss
+pop ss
+sbb %s,%s
+sbb %s,%s
+sbb %s,%s
+sbb %s,%s
+sbb al,%x
+sbb ax,%x
+push ds
+pop ds
+and %s,%s
+and %s,%s
+and %s,%s
+and %s,%s
+and al,%x
+and ax,%x
+es:
+daa
+sub %s,%s
+sub %s,%s
+sub %s,%s
+sub %s,%s
+sub al,%x
+sub ax,%x
+cs:
+das
+xor %s,%s
+xor %s,%s
+xor %s,%s
+xor %s,%s
+xor al,%x
+xor ax,%x
+ss:
+aaa
+cmp %s,%s
+cmp %s,%s
+cmp %s,%s
+cmp %s,%s
+cmp al,%x
+cmp ax,%x
+ds:
+aas
+inc ax
+inc cx
+inc dx
+inc bx
+inc sp
+inc bp
+inc si
+inc di
+dec ax
+dec cx
+dec dx
+dec bx
+dec sp
+dec bp
+dec si
+dec di
+push ax
+push cx
+push dx
+push bx
+push sp
+push bp
+push si
+push di
+pop ax
+pop cx
+pop dx
+pop bx
+pop sp
+pop bp
+pop si
+pop di
+pusha
+popa
+bound (unsupported)
+arpl (286+)
+fs: (386+)
+gs: (386+)
+opsize: (386+)
+adsize: (386+)
+push %x
+imul %s,%s,%x
+push %x
+imul %s,%s,%x
+insb
+insw
+outsb
+outsw
+jo %x
+jno %x
+jb %x
+jnb %x
+jz %x
+jnz %x
+jbe %x
+jnbe %x
+js %x
+jns %x
+jp %x
+jnp %x
+jl %x
+jnl %x
+jle %x
+jnle %x
+group #1 Eb,Ib
+-add %s,%x
+-or %s,%x
+-adc %s,%x
+-sbb %s,%x
+-and %s,%x
+-sub %s,%x
+-xor %s,%x
+-cmp %s,%x
+group #1 Ev,Iz
+-add %s,%x
+-or %s,%x
+-adc %s,%x
+-sbb %s,%x
+-and %s,%x
+-sub %s,%x
+-xor %s,%x
+-cmp %s,%x
+group #1 Eb,Ib
+-add %s,%x
+-or %s,%x
+-adc %s,%x
+-sbb %s,%x
+-and %s,%x
+-sub %s,%x
+-xor %s,%x
+-cmp %s,%x
+group #1 Ev,Ib
+-add %s,%x
+-or %s,%x
+-adc %s,%x
+-sbb %s,%x
+-and %s,%x
+-sub %s,%x
+-xor %s,%x
+-cmp %s,%x
+test %s,%s
+test %s,%s
+xchg %s,%s
+xchg %s,%s
+mov %s,%s
+mov %s,%s
+mov %s,%s
+mov %s,%s
+mov %s,%s
+lea %s,%s
+mov %s,%s
+group #10
+-pop %s
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+nop
+xchg cx,ax
+xchg dx,ax
+xchg bx,ax
+xchg sp,ax
+xchg bp,ax
+xchg si,ax
+xchg di,ax
+cbw
+cwd
+call %x:%x
+wait
+pushf
+popf
+sahf
+lahf
+mov al,[%x]
+mov ax,[%x]
+mov [%x],al
+mov [%x],ax
+movsb
+movsw
+cmpsb
+cmpsw
+test al,%x
+test ax,%x
+stosb
+stosw
+lodsb
+lodsw
+scasb
+scasw
+mov al,%x
+mov cl,%x
+mov dl,%x
+mov bl,%x
+mov ah,%x
+mov ch,%x
+mov dh,%x
+mov bh,%x
+mov ax,%x
+mov cx,%x
+mov dx,%x
+mov bx,%x
+mov sp,%x
+mov bp,%x
+mov si,%x
+mov di,%x
+group #2 Eb,Ib
+-rol %s,%x
+-ror %s,%x
+-rcl %s,%x
+-rcr %s,%x
+-shl %s,%x
+-shr %s,%x
+-sal %s,%x
+-sar %s,%x
+group #2 Ev,Ib
+-rol %s,%x
+-ror %s,%x
+-rcl %s,%x
+-rcr %s,%x
+-shl %s,%x
+-shr %s,%x
+-sal %s,%x
+-sar %s,%x
+ret near %x
+ret near
+les %s,%s
+lds %s,%s
+group #12 Eb,Ib
+-mov %s,%x	
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+group #12 Ev,Iz
+-mov %s,%x
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+enter %x,%x
+leave
+ret far %x
+ret far
+int3
+int %xh
+into
+iret
+group #2 Eb,1
+-rol %s,1
+-ror %s,1
+-rcl %s,1
+-rcr %s,1
+-shl %s,1
+-shr %s,1
+-sal %s,1
+-sar %s,1
+group #2 Ev,1
+-rol %s,1
+-ror %s,1
+-rcl %s,1
+-rcr %s,1
+-shl %s,1
+-shr %s,1
+-sal %s,1
+-sar %s,1
+group #2 Eb,cl
+-rol %s,cl
+-ror %s,cl
+-rcl %s,cl
+-rcr %s,cl
+-shl %s,cl
+-shr %s,cl
+-sal %s,cl
+-sar %s,cl
+group #2 Ev,cl
+-rol %s,cl
+-ror %s,cl
+-rcl %s,cl
+-rcr %s,cl
+-shl %s,cl
+-shr %s,cl
+-sal %s,cl
+-sar %s,cl
+aam %x
+aad %x
+salc
+xlat
+esc 0
+esc 1
+esc 2
+esc 3
+esc 4
+esc 5
+esc 6
+esc 7
+loopne %x
+loope %x
+loop %x
+jcxz %x
+in al,%x
+in ax,%x
+out %x,al
+out %x,ax
+call %x
+jmp %x
+jmp %x:%x
+jmp %x
+in al,dx
+in ax,dx
+out dx,al
+out dx,ax
+lock:
+int1 (386+)
+repne:
+rep:
+hlt
+cmc
+group #3 Eb
+-test %s,%x
+-test %s,%x
+-not %s
+-neg %s
+-mul %s
+-imul %s
+-div %s
+-idiv %s
+group #3 Ev
+-test %s,%x
+-test %s,%x
+-not %s
+-neg %s
+-mul %s 
+-imul %s
+-div %s
+-idiv %s
+clc
+stc
+cli
+sti
+cld
+std
+group #4 inc/dec
+-inc %s
+-inc %s
+-undefined
+-undefined
+-undefined
+-undefined
+-undefined
+-nti %xh
+group #5 inc/dec
+-inc %s
+-inc %s
+-call %s
+-call %s
+-jmp %s
+-jmp %s
+-push %s
+-undefined
